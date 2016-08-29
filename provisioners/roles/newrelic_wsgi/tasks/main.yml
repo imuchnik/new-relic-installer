@@ -1,6 +1,10 @@
 ---
 # tasks file for newrelic_wsgi
 
+- name: pip install mod_wsgi
+  pip: name=mod_wsgi
+  sudo: yes
+
 - name: record variables supplied by environment file 
   shell: echo "{{ env_vars }}"
   sudo: yes

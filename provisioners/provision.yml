@@ -6,24 +6,24 @@
   roles:
     - python27
     - apache
-    - mysql
     - php
     - newrelic_php
   vars_files:
     - "{{ env_file }}"
   environment: "{{ env_vars }}"
+  sudo: true
 
 - hosts: python-app
   gather_facts: False
   roles:
     - python27
     - apache
-    - mysql
     - wsgi_app
     - newrelic_wsgi
   vars_files:
     - "{{ env_file }}"
   environment: "{{ env_vars }}"
+  sudo: true
 
 - hosts: nr-php
   gather_facts: False

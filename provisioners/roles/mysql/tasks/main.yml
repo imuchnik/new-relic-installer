@@ -1,6 +1,0 @@
----
-# tasks file for mysql
-
-- name: install mysql
-  yum: name=mysql-server state=present
-  sudo: yes
